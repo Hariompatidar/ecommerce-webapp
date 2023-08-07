@@ -4,6 +4,7 @@ import Layout from "./../../components/Layout/Layout";
 import axios from "axios";
 import { useAuth } from "../../context/auth";
 import moment from "moment";
+import { Link } from "react-router-dom";
 
 const Orders = () => {
   const [orders, setOrders] = useState([]);
@@ -28,8 +29,14 @@ const Orders = () => {
             <UserMenu />
           </div>
           <div className="col-md-9">
-            <h1 className="text-center">All Orders</h1>
-            {orders?.map((o, i) => {
+            <h1 className="text-center pt-2">All Orders</h1>
+            {
+              orders.length===0 ? 
+              <div className="text-center border-dark pt-3">
+                <h2>Place your order now</h2>
+                <Link to='/' className="text-decoration-none ">Shop Now</Link>
+              </div>:
+              orders?.map((o, i) => {
               return (
                 <div className="border shadow">
                   <table className="table">

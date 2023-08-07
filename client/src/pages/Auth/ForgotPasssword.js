@@ -39,7 +39,10 @@ const ForgotPasssword = () => {
         <form onSubmit={handleSubmit}>
           <h4 className="title">RESET PASSWORD</h4>
 
-          <div className="mb-3">
+          <div className="form-group input-group">
+          <div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		</div>
             <input
               type="email"
               value={email}
@@ -50,7 +53,10 @@ const ForgotPasssword = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="form-group input-group">
+          <div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-question-circle"></i> </span>
+		</div>
             <input
               type="text"
               value={answer}
@@ -61,7 +67,10 @@ const ForgotPasssword = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="form-group input-group">
+          <div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
             <input
               type="password"
               value={newPassword}
@@ -73,7 +82,7 @@ const ForgotPasssword = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary mx-auto">
             RESET
           </button>
         </form>

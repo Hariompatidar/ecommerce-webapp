@@ -44,7 +44,10 @@ const Login = () => {
         <form onSubmit={handleSubmit}>
           <h4 className="title">LOGIN FORM</h4>
 
-          <div className="mb-3">
+          <div className="form-group input-group">
+          <div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		</div>
             <input
               type="email"
               autoFocus
@@ -52,11 +55,14 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
               className="form-control"
               id="exampleInputEmail1"
-              placeholder="Enter Your Email "
+              placeholder="Email address"
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="form-group input-group">
+          <div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
             <input
               type="password"
               value={password}
@@ -67,7 +73,7 @@ const Login = () => {
               required
             />
           </div>
-          <div className="mb-3">
+          <div className="mb-2 mx-auto">
             <button
               type="button"
               className="btn forgot-btn"
@@ -79,7 +85,7 @@ const Login = () => {
             </button>
           </div>
 
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" className="btn btn-primary mx-auto">
             LOGIN
           </button>
         </form>

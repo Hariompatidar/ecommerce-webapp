@@ -18,6 +18,8 @@
   box-shadow: 0 8px 6px -6px gray;
   --webkit-box-shadow: 0 8px 6px -6px gray;
   border-bottom: solid gray !important;
+  /* background-color: #333 !important; */
+  /* color: white !important; */
 }
 
 .nav-link {
@@ -52,27 +54,27 @@
 ==========footer============= */
 
 .footer {
-  color: white;
-  padding: 25px;
-  background: #000000; /* fallback for old browsers */
-  background: -webkit-linear-gradient(
-    to right,
-    #434343,
-    #000000
-  ); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #434343, #000000);
+  color: black;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  bottom: 0;
 }
 
 .footer a {
   text-decoration: none;
-  color: white;
+  color: #3a3a3a;
   padding: 10px;
+}
+
+.footer h1{
+  font-size: 20px;
 }
 
 .footer a:hover {
   color: #ffefba;
   border-bottom: 1px solid #ffefba;
 }
+
 /* =================================
 ======== page not found css ======= */
 .pnf {
@@ -142,3 +144,9 @@
   color: white;
   padding: 20px 0px;
 }
+
+
+.carousel{
+  margin-top: 60px;
+}
+

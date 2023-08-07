@@ -22,8 +22,11 @@ const Header = () => {
   };
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary fixed-top">
+      <nav className="navbar navbar-expand-lg bg-body-secondary fixed-top">
         <div className="container-fluid">
+        <Link to="/" className="navbar-brand">
+              🛒 ChorBazaar
+            </Link>
           <button
             className="navbar-toggler"
             type="button"
@@ -36,11 +39,10 @@ const Header = () => {
             <span className="navbar-toggler-icon" />
           </button>
           <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-            <Link to="/" className="navbar-brand">
-              🛒 Ecommerce App
-            </Link>
             <ul className="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li className="nav-item">
               <SearchInput />
+              </li>
               <li className="nav-item">
                 <NavLink to="/" className="nav-link ">
                   Home

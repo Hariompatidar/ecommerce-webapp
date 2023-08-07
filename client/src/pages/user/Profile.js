@@ -51,69 +51,103 @@ const Profile = () => {
   };
   return (
     <Layout title={"Your Profile"}>
-      <div className="container-fluid m-3 p-3 dashboard">
+      <div className="container-fluid mt-3 p-3 dashboard profile">
         <div className="row">
           <div className="col-md-3">
             <UserMenu />
           </div>
-          <div className="col-md-8">
+          <div className="col-md-8 profile-form ">
             <div className="form-container" style={{ marginTop: "-40px" }}>
               <form onSubmit={handleSubmit}>
                 <h4 className="title">USER PROFILE</h4>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    placeholder="Enter Your Name"
-                    autoFocus
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    placeholder="Enter Your Email "
-                    disabled
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                    className="form-control"
-                    id="exampleInputPassword1"
-                    placeholder="Enter Your Password"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    placeholder="Enter Your Phone"
-                  />
-                </div>
-                <div className="mb-3">
-                  <input
-                    type="text"
-                    value={address}
-                    onChange={(e) => setAddress(e.target.value)}
-                    className="form-control"
-                    id="exampleInputEmail1"
-                    placeholder="Enter Your Address"
-                  />
-                </div>
+                <div className="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {" "}
+                                <i class="fa fa-user"></i>{" "}
+                            </span>
+                        </div>
+                        <input
+                            type="text"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Full name"
+                            required
+                            autoFocus
+                        />
+                    </div>
+                    <div className="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {" "}
+                                <i class="fa fa-envelope"></i>{" "}
+                            </span>
+                        </div>
+                        <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Email address"
+                            required
+                        />
+                    </div>
+                    <div className="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {" "}
+                                <i class="fa fa-lock"></i>{" "}
+                            </span>
+                        </div>
+                        <input
+                            type="password"
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                            className="form-control"
+                            id="exampleInputPassword1"
+                            placeholder="Create password"
+                            required
+                        />
+                    </div>
+                    <div className="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {" "}
+                                <i class="fa fa-phone"></i>{" "}
+                            </span>
+                        </div>
+                        <input
+                            type="text"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Phone number"
+                            required
+                        />
+                    </div>
+                    <div className="form-group input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">
+                                {" "}
+                                <i class="fa fa-location-arrow"></i>{" "}
+                            </span>
+                        </div>
+                        <input
+                            type="text"
+                            value={address}
+                            onChange={(e) => setAddress(e.target.value)}
+                            className="form-control"
+                            id="exampleInputEmail1"
+                            placeholder="Address"
+                            required
+                        />
+                    </div>
 
-                <button type="submit" className="btn btn-primary">
+                <button type="submit" className="btn btn-primary mx-auto">
                   UPDATE
                 </button>
               </form>
